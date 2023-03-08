@@ -1,0 +1,191 @@
+.boutique {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    //Partie du défilement du texte
+    .text-defilement {
+        display: flex;
+        overflow: hidden;
+        background: rgb(236, 241, 244);
+        width: 100%;
+        position: absolute;
+        top: 135px;
+        transform: translateY(-50%);
+
+        .txt {
+            white-space: nowrap;
+            font-size: 16px;
+            animation: scrollTxt 20s linear infinite;
+            margin: 10px 0;
+            word-spacing: 5px;
+        }
+
+        @keyframes scrollTxt {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+    }
+
+    //Partie des articles
+    .container-items {
+        margin: 200px 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        @media screen and (max-width:637px) {
+            grid-template-columns: 50% 50%;
+            grid-gap: 10px;
+        }
+        @media screen and (max-width:530px) {
+            grid-template-columns: 100%;
+        }
+        @media screen and (max-width:335px) {
+            margin: 20px 0;
+        }
+
+        .item {
+            margin: 20px auto;
+
+            //Réglage général des images
+            .item1,
+            .item2,
+            .item3,
+            .item4,
+            .item5,
+            .item6,
+            .item7,
+            .item8,
+            .item9,
+            .item10,
+            .item11,
+            .item12 {
+                border: 2px solid $color2;
+                width: 300px;
+                height: 400px;
+                cursor: pointer;
+
+                @media screen and (max-width:637px) {
+                    width: 250px;
+                    height: 350px;
+                }
+                @media screen and (max-width:530px) {
+                    width: 300px;
+                    height: 400px;
+                }
+                @media screen and (max-width:350px) {
+                    width: 280px;
+                    height: 400px;
+                }
+                @media screen and (max-width:300px) {
+                    width: 230px;
+                    height: 400px;
+                }
+            }
+            //réglage individuel des images
+            .item1 {
+                background-image: url(../../assets/img/boutique/nettoyant1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/nettoyant2-boutique.jpg);
+                }
+            }
+            .item2 {
+                background-image: url(../../assets/img/boutique/tonique1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/tonique2-boutique.jpg);
+                }
+            }
+            .item3 {
+                background-image: url(../../assets/img/boutique/hydratant1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/hydratant2-boutique.jpg);
+                }
+            }
+            .item4 {
+                background-image: url(../../assets/img/boutique/lotion1-boutique.jpeg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/lotion2-boutique.jpeg);
+                }
+            }
+            .item5 {
+                background-image: url(../../assets/img/boutique/creme-nuit1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/creme-nuit2-boutique.jpg);
+                }
+            }
+            .item6 {
+                background-image: url(../../assets/img/boutique/argile1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/argile2-boutique.jpg);
+                }
+            }
+            .item7 {
+                background-image: url(../../assets/img/boutique/huile1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/huile2-boutique.jpg);
+                }
+            }
+            .item8 {
+                background-image: url(../../assets/img/boutique/creme-yeux1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/creme-yeux2-boutique.jpg);
+                }
+            }
+            .item9 {
+                background-image: url(../../assets/img/boutique/baume1-levre-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/baume2-levre-boutique.jpg);
+                }
+            }
+            .item10 {
+                background-image: url(../../assets/img/boutique/masque-yeux1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/masque-yeux2-boutique.jpg);
+                }
+            }
+            .item11 {
+                background-image: url(../../assets/img/boutique/savon1-boutique.jpg);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/savon2-boutique.jpg);
+                }
+            }
+            .item12 {
+                background-image: url(../../assets/img/boutique/lot1-boutique.png);
+                transition: 1.5s;
+
+                &:hover {
+                    background-image: url(../../assets/img/boutique/lot2-boutique.png);
+                }
+            }
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+}

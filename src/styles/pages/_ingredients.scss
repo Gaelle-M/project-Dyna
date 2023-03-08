@@ -1,0 +1,103 @@
+.ingredients {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin: 150px 0 0 50px;
+
+        @media screen and (max-width: 687px) {
+            text-align: center;
+        }
+        @media screen and (max-width: 733px) {
+            margin: 100px 10px 0;
+        }
+    }
+
+    .container {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 50px;
+
+        @media screen and (max-width:950px) {
+            margin: 40px 30px;
+        }
+        @media screen and (max-width:950px) {
+            margin: 40px 10px;
+        }
+
+        .article1,
+        .article2,
+        .article3,
+        .article4,
+        .article5 {
+            
+            @media screen and (max-width: 340px) {
+                width: 80%;  
+                
+            }
+            @media screen and (max-width: 280px) {
+                width: 70%;
+            }
+            
+
+            h4 {
+                margin: 10px 0;
+
+                @media screen and (max-width: 733px) {
+                    width: 80%;
+                    margin: 10px auto;
+                    text-align: center;
+                }
+            }
+            p{
+                font-size: 12px;
+                line-height: 20px;
+
+                @media screen and (max-width: 733px) {
+                    width: 80%;
+                    margin: 10px auto;
+                    text-align: justify;
+                }
+            }
+
+            .img-article1, .img-article2, .img-article3, .img-article4, .img-article5 {
+                height: 300px;
+                width: 80%;
+                margin: 0 auto;
+
+                @media screen and (max-width: 733px) {
+                    width: 50%;
+                    margin-bottom: 50px;
+                }
+                @media screen and (max-width: 575px) {
+                    width: 70%;
+                    margin-bottom: 50px;
+                }
+                @media screen and (max-width: 385px) {
+                    width: 80%;
+                    margin-bottom: 50px;
+                }
+                @media screen and (max-width: 340px) {
+                    width: 100%;
+                }
+                
+            }
+        }
+        .img-article1 {
+            background: url(../../assets/img/ingredient/img1-ingredient.png) center/cover;
+        }
+        .img-article2 {
+            background: url(../../assets/img/ingredient/img2-ingredient.png) center/cover;
+        }
+        .img-article3 {
+            background: url(../../assets/img/ingredient/img3-ingredient.png) center/cover;
+        }
+        .img-article4 {
+            background: url(../../assets/img/ingredient/img4-ingredient.png) center/cover;
+        }
+        .img-article5 {
+            background: url(../../assets/img/ingredient/img5-ingredient.png) center/cover;
+        }
+    }
+}

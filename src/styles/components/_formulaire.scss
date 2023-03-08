@@ -1,0 +1,140 @@
+form {
+    display: grid;
+    width: 100%;
+    max-width: 900px;
+
+    .names {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "nom pre"
+        "name sur";
+        grid-gap: 0 5px;
+
+        @media screen and (max-width:390px) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            grid-gap: 0;
+        }
+
+        .nom {
+            grid-area: nom;
+        }
+        .name {
+            grid-area: name;
+        }
+        .pre {
+            grid-area: pre;
+        }
+        .sur {
+            grid-area: sur;
+        }
+
+        input {
+            width: 320px;
+            height: 35px;
+
+            @media screen and (max-width:985px) {
+                width: 300px;
+            }
+            @media screen and (max-width:930px) {
+                width: 280px;
+            }
+            @media screen and (max-width:590px) {
+                width: 230px;
+            }
+            @media screen and (max-width:490px) {
+                width: 180px;
+            }
+            @media screen and (max-width:390px) {
+                width: 250px;
+                margin: auto;
+            }
+            @media screen and (max-width:300px) {
+                width: 220px;
+                margin: auto;
+            }
+        }
+    }
+    label {
+        font-size: 12px;
+        margin: 10px 0;
+        color: rgba(0, 0, 0, 0.747);
+
+        @media screen and (max-width:390px) {
+            margin: 5px auto;
+        }
+    }
+    input {
+        height: 35px;
+        background: rgba(209, 205, 205, 0.13);
+        border: 2px solid $color2;
+
+        &:focus {
+            border: 2px solid $color1;
+        }
+        @media screen and (max-width:390px) {
+            width: 250px;
+            margin: auto;
+        }
+        @media screen and (max-width:300px) {
+            width: 220px;
+            margin: auto;
+        }
+    }
+    textarea {
+        height: 100px;
+        background: rgba(209, 205, 205, 0.13);
+        border: 2px solid $color2;
+
+        &:focus {
+            border: 2px solid $color1;
+        }
+        @media screen and (max-width:390px) {
+            width: 280px;
+            margin: auto;
+        }
+        @media screen and (max-width:300px) {
+            width: 220px;
+            margin: auto;
+        }
+    }
+
+    input[type="submit"] {
+        margin: 30px 0;
+        width: 100px;
+        height: 40px;
+        background: $color1;
+        border: none;
+        cursor: pointer;
+        transition: 1s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+        @media screen and (max-width:390px) {
+            
+            margin: 10px auto;
+        }
+    }
+
+    .success,
+    .error {
+        width: 400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+.success {
+    background: $color1;
+    width: 500px;
+}
+.error {
+    background: rgb(236, 84, 84);
+    width: 800px;
+}
